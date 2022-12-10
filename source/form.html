@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Форма отзыва</title>
@@ -49,9 +49,8 @@
           <p class="comment__header-description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
 
-        <fieldset>
-          <form action="" class="filter-form">
-            <div class="filter-form__section">
+          <form action="https://echo.htmlacademy.ru/" class="filter-form">
+            <fieldset class="filter-form__section">
               <legend class="filter-form__section-title">
                 Представьтесь:
               </legend>
@@ -64,9 +63,9 @@
 
               <label for="user-patronymic">Отчество:</label>
               <input type="text" id="user-patronymic" name="patronymic">
-            </div>
+            </fieldset>
 
-            <div class="filter-form__section">
+            <fieldset class="filter-form__section">
               <legend class="filter-form__section-title">
                 Контактная информация:
               </legend>
@@ -76,9 +75,9 @@
 
               <label for="contact-email">Электронная почта*:</label>
               <input type="email" id="contact-email" name="email" pattern=".+@globex\.com" required>
-            </div>
+            </fieldset>
 
-            <div class="filter-form__section">
+            <fieldset class="filter-form__section">
               <legend class="filter-form__section-title">
                 Ваше общее впечатление:
               </legend>
@@ -91,10 +90,10 @@
 
               <input type="radio" id="quiz-difficult">
               <label for="quiz-difficult">Затрудняюсь ответить</label>
-            </div>
+            </fieldset>
 
 
-            <div class="filter-form__section">
+            <fieldset class="filter-form__section">
               <legend class="filter-form__section-title">
                 Посещенные достопримечательности:
               </legend>
@@ -110,22 +109,20 @@
 
               <input type="checkbox" id="quiz-crag">
               <label for="quiz-crag">Красные скалы</label>
-            </div>
+            </fieldset>
 
-            <div class="filter-form__section">
+            <fieldset class="filter-form__section">
               <legend class="filter-form__section-title">
                 Опишите свои эмоции:
               </legend>
 
-              <textarea name="" id="" cols="30" rows="10">
+              <textarea name="comment" cols="30" rows="10">
                 Опишите подробно все свои восторги
               </textarea>
-            </div>
+            </fieldset>
+            <button type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+            <span>* — обязательные поля</span>
           </form>
-        </fieldset>
-
-        <button>ОТПРАВИТЬ ОТЗЫВ</button>
-        <span>* — обязательные поля</span>
 
       </div>
     </section>
@@ -139,7 +136,7 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link-link social__item-link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+            <a class="social__item-link social__item-link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
           </li>
           <li class="social__item">
             <a class="social__item-link social__item-link--youtube" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
