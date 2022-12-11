@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма отзыва</title>
+  <base href="https://htmlacademy-adaptive.github.io/2028317-sedona-27/3/">
+</head>
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img class="main-header__logo-image" src="img/logotype-mobile.svg" width="185" height="96" alt="Седона">
+    </a>
+    <nav class="main-header__nav">
+      <button class="main-header__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-header__nav-wrapper">
+        <ul class="main-header__nav-list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a>
+              ГЛАВНАЯ
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">
+              ФОТО И ВИДЕО
+            </a>
+          </li>
+        </ul>
+        <ul class="main-header__nav-list site-list">
+          <li class="site-list__item">
+            <a href="#">
+              ФОРМА ОТЗЫВА
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">
+              HTML ACADEMY
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <h1 class="visually-hidden">Седона</h1>
+    <section class="main-container__comment comment">
+      <div class="comment__wrapper">
+        <div class="comment__header">
+          <b class="comment__header-title">Оставьте свой отзыв</b>
+          <p class="comment__header-description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
+
+          <form action="https://echo.htmlacademy.ru/" class="filter-form">
+            <fieldset class="filter-form__section">
+              <legend class="filter-form__section-title">
+                Представьтесь:
+              </legend>
+
+              <label for="user-name">Имя*:</label>
+              <input type="text" id="user-name" name="name" required>
+
+              <label for="user-surname">Фамилия*:</label>
+              <input type="text" id="user-surname" name="surname" required>
+
+              <label for="user-patronymic">Отчество:</label>
+              <input type="text" id="user-patronymic" name="patronymic">
+            </fieldset>
+
+            <fieldset class="filter-form__section">
+              <legend class="filter-form__section-title">
+                Контактная информация:
+              </legend>
+
+              <label for="contact-phone">Контактный телефон*:</label>
+              <input type="tel" id="contact-phone" name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+
+              <label for="contact-email">Электронная почта*:</label>
+              <input type="email" id="contact-email" name="email" pattern=".+@globex\.com" required>
+            </fieldset>
+
+            <fieldset class="filter-form__section">
+              <legend class="filter-form__section-title">
+                Ваше общее впечатление:
+              </legend>
+
+              <input type="radio" id="quiz-pos" checked>
+              <label for="quiz-pos">Скорее положительное</label>
+
+              <input type="radio" id="quiz-negative">
+              <label for="quiz-negative">Скорее отрицательное</label>
+
+              <input type="radio" id="quiz-difficult">
+              <label for="quiz-difficult">Затрудняюсь ответить</label>
+            </fieldset>
+
+
+            <fieldset class="filter-form__section">
+              <legend class="filter-form__section-title">
+                Посещенные достопримечательности:
+              </legend>
+
+              <input type="checkbox" id="quiz-bridge" checked>
+              <label for="quiz-bridge">Мост Дьявола</label>
+
+              <input type="checkbox" id="quiz-hill" checked>
+              <label for="quiz-hill">Гора-Колокол</label>
+
+              <input type="checkbox" id="quiz-park" checked>
+              <label for="quiz-park">Слайд-парк</label>
+
+              <input type="checkbox" id="quiz-crag">
+              <label for="quiz-crag">Красные скалы</label>
+            </fieldset>
+
+            <fieldset class="filter-form__section">
+              <legend class="filter-form__section-title">
+                Опишите свои эмоции:
+              </legend>
+
+              <textarea name="comment" cols="30" rows="10">
+                Опишите подробно все свои восторги
+              </textarea>
+            </fieldset>
+            <button type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+            <span>* — обязательные поля</span>
+          </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__hashtag">
+        <b class="main-footer__hashtag-title">#VISITSEDONA</b>
+      </div>
+      <div class="main-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__item-link social__item-link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__item-link social__item-link--youtube" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
+          </li>
+          <li class="social__item">
+            <a class="social__item-link social__item-link--telegram" href="https://t.me/htmlacademy">Телеграмм</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
