@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Фото и видео</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <base href="https://htmlacademy-adaptive.github.io/2028317-sedona-27/4/">
+</head>
+<body class="page__body">
+  <div class="container">
+    <header class="main-header">
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logotype-mobile.svg" alt="Седона">
+      </a>
+      <!-- <nav class="main-header__nav"> -->
+        <!-- <div class="main-header__nav-wrapper"> -->
+
+          <!-- <ul class="main-header__nav-list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__item-link">
+                ГЛАВНАЯ
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="catalog.html">
+                ФОТО И ВИДЕО
+              </a>
+            </li>
+          </ul> -->
+
+          <!-- <ul class="main-header__nav-list site-list">
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="form.html">
+                ФОРМА ОТЗЫВА
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="#">
+                HTML ACADEMY
+              </a>
+            </li>
+          </ul> -->
+        <!-- </div> -->
+      <!-- </nav> -->
+    </header>
+
+    <main class="main-container">
+      <h1 class="visually-hidden">Седона</h1>
+      <div class="main-container__catalog"></div>
+      <section class="main-container__gallery gallery">
+        <div class="gallery__wrapper">
+          <div class="gallery__header">
+            <h2 class="gallery__header-title">Фото и видео</h2>
+            <p class="gallery__header-caption">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          </div>
+
+          <div class="gallery__item-wrapper">
+            <div class="gallery__item">
+              <img src="img/photo-boris.jpg" alt="Просторы Седоны" width="280" height="280">
+              <h3 class="gallery__item-title">Неродные просторы</h3>
+              <cite class="gallery__item-author">Автор фото: Борис</cite>
+              <div class="gallery__item-like">
+                <div class="gallery__item-like-icon"></div>
+                <span class="gallery__item-like-number">1350</span>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <img src="img/photo-sergey.jpg" alt="Местная растительность" width="280" height="280">
+              <h3 class="gallery__item-title">Местная растительность</h3>
+              <cite class="gallery__item-author">Автор фото: Сергей</cite>
+              <div class="gallery__item-like">
+                <div class="gallery__item-like-icon"></div>
+                <span class="gallery__item-like-number">143</span>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <img src="img/photo-petr.jpg" alt="Дорога на север" width="280" height="280">
+              <h3 class="gallery__item-title">Дорога на север</h3>
+              <cite class="gallery__item-author">Автор фото: Петр</cite>
+              <div class="gallery__item-like">
+                <div class="gallery__item-like-icon"></div>
+                <span class="gallery__item-like-number">96</span>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <img src="img/photo-anton.jpg" alt="Мост Дьявола" width="280" height="280">
+              <h3 class="gallery__item-title">Мост Дьявола</h3>
+              <cite class="gallery__item-author">Автор фото: Антон</cite>
+              <div class="gallery__item-like">
+                <div class="gallery__item-like-icon"></div>
+                <span class="gallery__item-like-number">254</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-presentation">
+        <div class="video-presentation__wrapper">
+          <div class="video-presentation__caption">
+            <b class="video-presentation__caption-title">Все еще сомневаетесь?</b>
+            <p class="video-presentation__caption-description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          </div>
+          <video class="video-presentation__caption-video" src="https://www.youtube.com/watch?v=JzJA5xzN0QE" poster="img/video-fille.jpg"></video>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__hashtag">
+          <b class="main-footer__hashtag-title">#VISITSEDONA</b>
+        </div>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__list-item">
+              <a class="social__list-item-link social__list-item-link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Вконтакте</span></a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-item-link social__list-item-link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграмм</span></a>
+            </li>
+            <li class="social__list-item">
+              <a class="social__list-item-link social__list-item-link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,329 @@
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+.main-header {
+  height: 56px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 21px;
+}
+.main-header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.main-header__toggle {
+  background-image: url("../../img/icon-menu.svg");
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+}
+.main-header__nav-list {
+  display: flex;
+}
+.site-list__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  font-family: "PT Sans";
+}
+.site-list__item-link {
+  color: inherit;
+  text-decoration: none;
+}
+.site-list__item--active {
+  color: #766357;
+}
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+}
+.advantage__item--textual {
+  padding: 20px 15px;
+}
+.advantage__item--background {
+  background-color: #EEEEEE;
+}
+.advantage__item-image {
+  width: 100%;
+  height: 260px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.advantage__item--top .advantage__item-image {
+  order: 2;
+  background-image: url("../../img/photo-city.jpg");
+}
+.advantage__item--top .advantage__item-description {
+  order: 1;
+}
+.advantage__item--bottom .advantage__item-image {
+  order: 2;
+  background-image: url("../../img/photo-bridge.jpg");
+}
+.advantage__item--bottom .advantage__item-description-title {
+  color: #FFFFFF;
+}
+.advantage__item--bottom .advantage__item-description {
+  order: 1;
+}
+.advantage__item-description {
+  padding: 50px 18px 28px 18px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  font-family: "PT Sans";
+}
+.advantage__item-description-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #FFFFFF;
+  font-family: "PT Sans Bold";
+}
+.advantage__item-description--background {
+  background-color: #81B3D2;
+  color: #FFFFFF;
+}
+.advantage__item-description-number {
+  margin-top: 10px;
+}
+.advantage__header {
+  padding: 35px 30px 24px;
+  text-align: center;
+}
+.advantage__header-slogan {
+  margin: 0;
+}
+.advantage__header-intro {
+  margin-top: 35px;
+}
+.services-list {
+  display: flex;
+  text-align: start;
+  gap: 8px;
+  padding: 0;
+}
+.services-list:not(:first-of-type) {
+  margin-top: 10px;
+}
+.services-list__image {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.services-list__description {
+  padding: 13px 2px;
+}
+.services-list__description-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  font-family: "PT Sans Bold";
+}
+.services-list__description-caption {
+  margin-bottom: 0;
+  margin-top: 14px;
+}
+.convenience-list {
+  padding: 24px 18px 24px 18px;
+}
+.convenience-list-title {
+  margin: 0;
+}
+.house {
+  background-image: url("../../img/icon-house.svg");
+}
+.burger {
+  background-image: url("../../img/icon-burger.svg");
+}
+.souvenir {
+  background-image: url("../../img/icon-souvenir.svg");
+}
+.line {
+  border-bottom: 1px solid #D6D6D6;
+}
+.feedback {
+  text-align: center;
+}
+.feedback__title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  font-family: "PT Sans";
+  margin: 38px 0 32px;
+}
+.feedback__button {
+  display: block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #FFFFFF;
+  font-family: "PT Sans";
+  background-color: #81B3D2;
+  text-decoration: none;
+  padding: 16px 49px;
+  margin: 32px 0 49px;
+}
+.main-footer {
+  text-align: center;
+}
+.main-footer__hashtag {
+  margin-top: 28px;
+}
+.main-footer__hashtag-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+  font-family: "PT Sans Bold";
+}
+.main-footer__social {
+  margin: 34px 0 40px 0;
+}
+.social__list {
+  display: flex;
+  column-gap: 6px;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+.social__list-item-link {
+  color: inherit;
+  text-decoration: none;
+}
+.social__list-item-link--vkontakte {
+  display: block;
+  background-image: url("../../img/social-vk.svg");
+  width: 48px;
+  height: 48px;
+}
+.social__list-item-link--youtube {
+  display: block;
+  background-image: url("../../img/social-you-tube.svg");
+  width: 48px;
+  height: 48px;
+}
+.social__list-item-link--telegram {
+  display: block;
+  background-image: url("../../img/socia-telegram.svg");
+  width: 48px;
+  height: 48px;
+}
+.copyright {
+  display: flex;
+  column-gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.copyright__link {
+  display: block;
+  background-image: url("../../img/autograph.svg");
+  width: 27px;
+  height: 34px;
+}
+.main-container__image {
+  height: 389px;
+  background-image: url("../../img/photo-main-sedona.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-container__catalog {
+  height: 164px;
+  background-image: url("../../img/photo-catalog.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-container img {
+  width: 100%;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"), url("../fonts/ptsans.woff") format("woff"), url("../fonts/ptsans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PT Sans Bold";
+  src: local("PT Sans Bold"), url("../fonts/ptsansbold.woff") format("woff"), url("../fonts/ptsansbold.woff2") format("woff2");
+}
+.video-presentation {
+  padding: 0 18px;
+}
+.video-presentation__caption {
+  text-align: center;
+}
+.video-presentation__caption-video {
+  width: 280px;
+  height: 177px;
+}
+.gallery__header {
+  text-align: center;
+  padding: 0 18px;
+}
+.gallery__item {
+  padding: 0 18px;
+}
+.gallery__item-author {
+  text-transform: none;
+  font-style: normal;
+}
+.gallery__item-like {
+  display: flex;
+  column-gap: 14px;
+}
+.gallery__item-like-icon {
+  background-image: url("../../img/icon-like.svg");
+  width: 23px;
+  height: 21px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  font-family: "PT Sans";
+}
+.page-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  font-family: "PT Sans";
+}
+/*# sourceMappingURL=style.css.map */
