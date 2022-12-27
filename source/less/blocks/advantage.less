@@ -1,0 +1,138 @@
+@import "../common/fonts.less";
+@import "../common/colors.less";
+
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+  &--textual {
+    padding: 20px 15px;
+  }
+
+  &--background {
+    background-color: @additionalBackgroundColor;
+  }
+
+  &-image {
+    width: 100%;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--top {
+    .advantage__item-image {
+      order: 2;
+      background-image: url("../../img/photo-city.jpg");
+    }
+
+    .advantage__item-description {
+      order: 1;
+    }
+  }
+
+  &--bottom {
+    .advantage__item-image {
+      order: 2;
+      background-image: url("../../img/photo-bridge.jpg");
+    }
+
+    .advantage__item-description-title {
+      color: @textColorLight;
+    }
+
+    .advantage__item-description {
+      order: 1;
+    }
+  }
+
+  &-description {
+    padding: 50px 18px 28px 18px;
+    text-align: center;
+    .font(@defaultSubtitleFontSize);
+
+    &-title {
+      margin: 0;
+      .font(@defaultMobileTitleFontSize, 700, @textColorLight, 26px, "PT Sans Bold");
+    }
+
+    &--background {
+      background-color: @mainColor;
+      color: @textColorLight;
+    }
+
+    &-number {
+      margin-top: 10px;
+    }
+  }
+}
+
+.advantage__header {
+  padding: 35px 30px 24px;
+  text-align: center;
+
+  &-slogan {
+    margin: 0;
+  }
+
+  &-intro {
+    margin-top: 35px;
+  }
+}
+
+.services-list {
+  display: flex;
+  text-align: start;
+  gap: 8px;
+  padding: 0;
+
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__description {
+    padding: 13px 2px;
+
+    &-title {
+      margin: 0;
+      .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px, "PT Sans Bold");
+    }
+
+    &-caption {
+      margin-bottom: 0;
+      margin-top: 14px;
+    }
+  }
+}
+
+.convenience-list {
+  padding: 24px 18px 24px 18px;
+
+  &-title {
+    margin: 0;
+  }
+}
+
+.house {
+  background-image: url("../../img/icon-house.svg");
+}
+
+.burger {
+  background-image: url("../../img/icon-burger.svg");
+}
+
+.souvenir {
+  background-image: url("../../img/icon-souvenir.svg");
+}
+
+.line {
+  border-bottom: 1px solid @lineColor;
+}

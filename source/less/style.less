@@ -1,1 +1,40 @@
 // Начните писать стили здесь
+@import "./adaptive/mobile.less";
+@import "./blocks/main-header.less";
+@import "./blocks/advantage.less";
+@import "./blocks/feedback.less";
+@import "./blocks/main-footer.less";
+@import "./blocks/main-container.less";
+@import "./common/fonts.less";
+@import "./common/colors.less";
+@import "./blocks/video-presentation.less";
+@import "./blocks/gallery.less";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  font-size: @defaultSubtitleFontSize;
+  text-transform: uppercase;
+  .font();
+}
+
+.page-title {
+  .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px);
+}
