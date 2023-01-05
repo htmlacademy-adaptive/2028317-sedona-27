@@ -1,0 +1,29 @@
+.form-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 26px 18px 0;
+  padding-bottom: 34px;
+
+  &--impression {
+    padding-bottom: 10px;
+  }
+
+  &--sights {
+    padding-bottom: 11px;
+  }
+}
+
+.form-section__title {
+  .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px, "PT Sans");
+  text-align: center;
+}
+
+.form-section__comment {
+  background-color: @mainFormColor;
+  border: none;
+  .font (@defaultMobileTitleFontSize, 700, rgba(0, 0, 0, 0.3), 26px);
+  padding: 18px;
+  margin-top: 19px;
+  min-height: 115px;
+}

@@ -1,20 +1,22 @@
-@import "../common/colors.less";
-@import "../common/fonts.less";
-
 .feedback {
   text-align: center;
+  padding: 42px 20px 0 20px;
+}
 
-  &__title {
-    .font(21px, 700, @textColorDark, 26px);
-    margin: 38px 0 32px;
-  }
+.feedback__title {
+  .font(21px, 700, @textColorDark, 26px);
+  margin: 0 0 20px;
+}
 
-  &__button {
-    display: block;
-    .font(21px, 700, @textColorLight, 26px);
-    background-color: @mainColor;
-    text-decoration: none;
-    padding: 16px 49px;
-    margin: 32px 0 49px;
-  }
+.feedback__description {
+  margin: 0;
+}
+
+.feedback__button {
+  display: block;
+  .font(21px, 700, @textColorLight, 26px);
+  background-color: @mainColor;
+  text-decoration: none;
+  padding: 16px 24px;
+  margin: 32px 0 49px;
 }
