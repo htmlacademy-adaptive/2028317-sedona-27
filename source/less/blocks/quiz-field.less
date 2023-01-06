@@ -1,0 +1,47 @@
+.quiz-field:not(:last-of-type) {
+  margin-bottom: 11px;
+}
+
+.quiz-field {
+  margin: 18px 0 24px;
+  text-transform: none;
+  position: relative;
+  .font(@defaultMobileTitleFontSize, bold);
+  padding-left: 65px;
+  padding-top: 13px;
+}
+
+.quiz-field__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.quiz-field__input:checked ~ .radiomark::after {
+  content: "";
+}
+
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  width: 46px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.radiomark::after {
+  content: none;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

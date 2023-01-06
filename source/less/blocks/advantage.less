@@ -1,0 +1,93 @@
+.advantage__item {
+  display: flex;
+  flex-direction: column;
+
+  &--textual {
+    padding: 20px 15px 32px 15px;
+  }
+
+  &--background {
+    background-color: @additionalBackgroundColor;
+  }
+
+  &--top {
+    .advantage__item-image {
+      order: 2;
+      background-image: url("../img/photo-city.jpg");
+    }
+
+    .advantage__item-description {
+      order: 1;
+    }
+  }
+
+  &--bottom {
+    .advantage__item-image {
+      order: 2;
+      background-image: url("../img/photo-bridge.jpg");
+    }
+
+    .advantage__item-description-title {
+      color: @textColorLight;
+    }
+
+    .advantage__item-description {
+      padding-top: 40px;
+      order: 1;
+    }
+  }
+}
+
+.advantage__header {
+  padding: 35px 30px 24px;
+  text-align: center;
+
+  &-slogan {
+    margin: 0;
+  }
+
+  &-intro {
+    margin-top: 35px;
+  }
+}
+
+
+.advantage__item-image {
+  width: 100%;
+  height: 260px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &--house {
+    background-image: url("../img/icon-house.svg");
+  }
+
+  &--burger {
+    background-image: url("../img/icon-burger.svg");
+  }
+
+  &--souvenir {
+    background-image: url("../img/icon-souvenir.svg");
+  }
+}
+
+.advantage__item-description {
+  padding: 50px 18px 28px 18px;
+  text-align: center;
+  .font(@defaultSubtitleFontSize);
+
+  &--background {
+    background-color: @mainColor;
+    color: @textColorLight;
+  }
+}
+
+.advantage__item-description-title {
+  margin: 0;
+  .font(@defaultMobileTitleFontSize, 700, @textColorLight, 26px, "PT Sans");
+}
+
+.advantage__item-description-number {
+  margin-top: 10px;
+}
