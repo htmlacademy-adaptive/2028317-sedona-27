@@ -14,10 +14,11 @@
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logotype-mobile.svg" alt="Седона">
       </a>
-      <!-- <nav class="main-header__nav"> -->
-        <!-- <div class="main-header__nav-wrapper"> -->
 
-          <!-- <ul class="main-header__nav-list site-list">
+      <nav class="main-header__nav">
+        <div class="main-header__nav-wrapper">
+
+          <ul class="main-header__nav-list site-list">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__item-link">
                 ГЛАВНАЯ
@@ -28,9 +29,9 @@
                 ФОТО И ВИДЕО
               </a>
             </li>
-          </ul> -->
+          </ul>
 
-          <!-- <ul class="main-header__nav-list site-list">
+          <ul class="main-header__nav-list site-list">
             <li class="site-list__item">
               <a class="site-list__item-link" href="form.html">
                 ФОРМА ОТЗЫВА
@@ -41,9 +42,10 @@
                 HTML ACADEMY
               </a>
             </li>
-          </ul> -->
-        <!-- </div> -->
-      <!-- </nav> -->
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
     <main class="main-container">
@@ -61,40 +63,42 @@
 
       <section class="review">
         <form class ="review__form" action="https://echo.htmlacademy.ru/">
-          <fieldset class="review__form-section form-section">
-            <legend class="form-section__title">
-              Представьтесь:
-            </legend>
-            <div class="form-section__field user-field">
-              <label class="user-field__label" for="user-name">Имя*:</label>
-              <input class="user-field__input" type="text" id="user-name" name="name" value="Пётр" required>
-            </div>
-            <div class="form-section__field user-field">
-              <label class="user-field__label" for="user-surname">Фамилия*:</label>
-              <input class="user-field__input" type="text" id="user-surname" name="surname" value="Пустота" required>
-            </div>
-            <div class="form-section__field user-field">
-              <label class="user-field__label" for="user-patronymic">Отчество:</label>
-              <input class="user-field__input" type="text" id="user-patronymic" name="patronymic" value="Викторович">
-            </div>
-          </fieldset>
+          <div class="review__form-wrapper">
+            <fieldset class="review__form-section form-section">
+              <legend class="form-section__title">
+                Представьтесь:
+              </legend>
+              <div class="form-section__field user-field">
+                <label class="user-field__label" for="user-name">Имя*:</label>
+                <input class="user-field__input" type="text" id="user-name" name="name" value="Пётр" required>
+              </div>
+              <div class="form-section__field user-field">
+                <label class="user-field__label" for="user-surname">Фамилия*:</label>
+                <input class="user-field__input" type="text" id="user-surname" name="surname" value="Пустота" required>
+              </div>
+              <div class="form-section__field user-field">
+                <label class="user-field__label" for="user-patronymic">Отчество:</label>
+                <input class="user-field__input" type="text" id="user-patronymic" name="patronymic" value="Викторович">
+              </div>
+            </fieldset>
 
-      <div class="line"></div>
+        <div class="line"></div>
 
-          <fieldset class="review__form-section form-section form-section--contacts">
-            <legend class="form-section__title">
-              Контактная информация:
-            </legend>
-            <div class="form-section__field user-field">
-              <label class="user-field__label" for="contact-phone">Контактный телефон*:</label>
-              <input class="user-field__input" type="tel" id="contact-phone" name="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
-            </div>
+            <fieldset class="review__form-section form-section form-section--contacts">
+              <legend class="form-section__title">
+                Контактная информация:
+              </legend>
+              <div class="form-section__field user-field">
+                <label class="user-field__label" for="contact-phone">Контактный телефон*:</label>
+                <input class="user-field__input" type="tel" id="contact-phone" name="phone" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+              </div>
 
-            <div class="form-section__field user-field">
-              <label class="user-field__label" for="contact-email">Электронная почта*:</label>
-              <input class="user-field__input" type="email" id="contact-email" name="email" placeholder="Введите e-mail" pattern=".+@globex\.com" required>
-            </div>
-          </fieldset>
+              <div class="form-section__field user-field">
+                <label class="user-field__label" for="contact-email">Электронная почта*:</label>
+                <input class="user-field__input" type="email" id="contact-email" name="email" placeholder="Введите e-mail" pattern=".+@globex\.com" required>
+              </div>
+            </fieldset>
+          </div>
 
       <div class="line"></div>
 
@@ -103,29 +107,31 @@
               Ваше общее впечатление:
             </legend>
 
-            <div class="form-section__quiz quiz-field">
-              <label>
-                <input type="radio" checked class="quiz-field__input" />
-                <span class="radiomark"></span>
-                <span>Скорее положительное</span>
-              </label>
-            </div>
+              <div class="form-section__wrapper form-section__wrapper--quiz">
+                <div class="form-section__quiz quiz-field">
+                  <label>
+                    <input type="radio" checked class="quiz-field__input" name="quiz-field"/>
+                    <span class="radiomark"></span>
+                    <span>Скорее положительное</span>
+                  </label>
+                </div>
 
-            <div class="form-section__quiz quiz-field">
-              <label>
-                <input type="radio" class="quiz-field__input" />
-                <span class="radiomark"></span>
-                <span>Скорее отрицательное</span>
-              </label>
-            </div>
+                <div class="form-section__quiz quiz-field">
+                  <label>
+                    <input type="radio" class="quiz-field__input" name="quiz-field"/>
+                    <span class="radiomark"></span>
+                    <span>Скорее отрицательное</span>
+                  </label>
+                </div>
 
-            <div class="form-section__quiz quiz-field">
-              <label>
-                <input type="radio" class="quiz-field__input" />
-                <span class="radiomark"></span>
-                <span>Затрудняюсь ответить</span>
-              </label>
-            </div>
+                <div class="form-section__quiz quiz-field">
+                  <label>
+                    <input type="radio" class="quiz-field__input" name="quiz-field"/>
+                    <span class="radiomark"></span>
+                    <span>Затрудняюсь ответить</span>
+                  </label>
+                </div>
+              </div>
           </fieldset>
 
       <div class="line"></div>
@@ -135,36 +141,38 @@
               Посещенные достопримечательности:
             </legend>
 
-            <div class="form-section__quiz check-field">
-              <label>
-                <input type="checkbox" name="black" class="check-field__input" checked />
-                <span class="checkmark"></span>
-                <span>Мост Дьявола</span>
-              </label>
-            </div>
+            <div class="form-section__wrapper form-section__wrapper--check">
+              <div class="form-section__quiz check-field">
+                <label>
+                  <input type="checkbox" name="black" class="check-field__input" checked />
+                  <span class="checkmark"></span>
+                  <span>Мост Дьявола</span>
+                </label>
+              </div>
 
-            <div class="form-section__quiz check-field">
-              <label>
-                <input type="checkbox" name="black" class="check-field__input" />
-                <span class="checkmark"></span>
-                <span>Гора-Колокол</span>
-              </label>
-            </div>
+              <div class="form-section__quiz check-field">
+                <label>
+                  <input type="checkbox" name="black" class="check-field__input" />
+                  <span class="checkmark"></span>
+                  <span>Гора-Колокол</span>
+                </label>
+              </div>
 
-            <div class="form-section__quiz check-field">
-              <label>
-                <input type="checkbox" name="black" class="check-field__input" />
-                <span class="checkmark"></span>
-                <span>Слайд-парк</span>
-              </label>
-            </div>
+              <div class="form-section__quiz check-field">
+                <label>
+                  <input type="checkbox" name="black" class="check-field__input" />
+                  <span class="checkmark"></span>
+                  <span>Слайд-парк</span>
+                </label>
+              </div>
 
-            <div class="form-section__quiz check-field">
-              <label>
-                <input type="checkbox" name="black" class="check-field__input" />
-                <span class="checkmark"></span>
-                <span>Красные скалы</span>
-              </label>
+              <div class="form-section__quiz check-field">
+                <label>
+                  <input type="checkbox" name="black" class="check-field__input" />
+                  <span class="checkmark"></span>
+                  <span>Красные скалы</span>
+                </label>
+              </div>
             </div>
           </fieldset>
 
@@ -177,9 +185,10 @@
 
             <textarea class="form-section__comment" name="comment" rows="4">Опишите подробно все свои восторги</textarea>
           </fieldset>
-
-          <a class="review__button" type="submit">ОТПРАВИТЬ ОТЗЫВ</a>
-          <div class="review__suffix">* — обязательные поля</div>
+          <div class="review__button-wrapper">
+            <a class="review__button" type="submit">ОТПРАВИТЬ ОТЗЫВ</a>
+            <div class="review__suffix">* — обязательные поля</div>
+          </div>
         </form>
       </section>
     </main>
