@@ -1,4 +1,13 @@
 .container {
   width: 320px;
   margin: 0 auto;
+  font-size: @defaultSubtitleFontSize;
+  text-transform: uppercase;
+  .font();
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
 }

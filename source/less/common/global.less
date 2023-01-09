@@ -20,16 +20,16 @@ body {
   overflow: hidden;
 }
 
-.container {
-  font-size: @defaultSubtitleFontSize;
-  text-transform: uppercase;
-  .font();
-}
-
 .page-title {
   .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px);
 }
 
 .line {
   border-bottom: 1px solid @lineColor;
+}
+
+@media (min-width: 768px) {
+  .line {
+    display: none;
+  }
 }

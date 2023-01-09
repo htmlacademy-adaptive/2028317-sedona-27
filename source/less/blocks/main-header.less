@@ -1,5 +1,5 @@
 .main-header {
-  height: 56px;
+  min-height: 56px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -13,6 +13,10 @@
   transform: translate(-50%, 0);
 }
 
+.main-header__nav {
+  display: none;
+}
+
 .main-header__toggle {
   background-image: url("../img/icon-menu.svg");
   width: 22px;
@@ -24,4 +28,25 @@
 
 .main-heade__nav-list {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    padding-right: 0;
+  }
+
+  .main-header__nav {
+    display: block;
+    width: 100%;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+
+  .main-header__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 }
