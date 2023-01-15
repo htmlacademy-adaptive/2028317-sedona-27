@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фото и видео</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
-  <div class="container">
+  <div class="container container--catalog">
     <header class="main-header">
       <button class="main-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -53,7 +54,7 @@
 
       <section class="main-container__subheader subheader">
         <div class="subheader__image">
-          <img src="./img/logo-caption.svg" alt="Седона" width="229" height="39">
+          <img class="subheader__image-caption" src="./img/logo-caption.svg" alt="Седона">
         </div>
         <h2 class="subheader__title">Фото и видео</h2>
         <p class="subheader__caption">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
@@ -66,8 +67,10 @@
           <div class="gallery__item gallery__item--big">
             <img src="img/photo-boris.jpg" alt="Просторы Седоны">
             <div class="gallery__item-info">
-              <h3 class="gallery__item-info-title">Неродные просторы</h3>
-              <cite class="gallery__item-info-author">Автор фото: Борис</cite>
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Неродные просторы</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Борис</cite>
+              </div>
               <div class="gallery__item-info-like">
                 <div class="gallery__item-info-like-icon"></div>
                 <span class="gallery__item-info-like-number">1350</span>
@@ -80,8 +83,10 @@
           <div class="gallery__item">
             <img src="img/photo-sergey.jpg" alt="Местная растительность">
             <div class="gallery__item-info">
-              <h3 class="gallery__item-info-title">Местная растительность</h3>
-              <cite class="gallery__item-info-author">Автор фото: Сергей</cite>
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Местная растительность</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Сергей</cite>
+              </div>
               <div class="gallery__item-info-like">
                 <div class="gallery__item-info-like-icon"></div>
                 <span class="gallery__item-info-like-number">143</span>
@@ -94,8 +99,10 @@
           <div class="gallery__item">
             <img src="img/photo-petr.jpg" alt="Дорога на север">
             <div class="gallery__item-info">
-              <h3 class="gallery__item-info-title">Дорога на север</h3>
-              <cite class="gallery__item-info-author">Автор фото: Петр</cite>
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Дорога на север</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Петр</cite>
+              </div>
               <div class="gallery__item-info-like">
                 <div class="gallery__item-info-like-icon"></div>
                 <span class="gallery__item-info-like-number">96</span>
@@ -108,8 +115,10 @@
           <div class="gallery__item">
             <img src="img/photo-anton.jpg" alt="Мост Дьявола">
             <div class="gallery__item-info">
-              <h3 class="gallery__item-info-title">Мост Дьявола</h3>
-              <cite class="gallery__item-info-author">Автор фото: Антон</cite>
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Мост Дьявола</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Антон</cite>
+              </div>
               <div class="gallery__item-info-like">
                 <div class="gallery__item-info-like-icon"></div>
                 <span class="gallery__item-info-like-number">254</span>
@@ -125,9 +134,11 @@
         <div class="video-presentation__wrapper">
           <div class="video-presentation__caption">
             <b class="video-presentation__caption-title">Все еще сомневаетесь?</b>
-            <p class="video-presentation__caption-description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <p class="video-presentation__caption-description">Смотрите видеопрезентацию и скорее за билетами, пока они <br> не подорожали в очередной раз!</p>
           </div>
-          <video class="video-presentation__caption-video" src="https://www.youtube.com/watch?v=JzJA5xzN0QE" poster="img/video-fille.jpg"></video>
+          <div class="video-presentation__preview">
+            <img src="./img/icon-play.svg" alt="">
+          </div>
         </div>
       </section>
 

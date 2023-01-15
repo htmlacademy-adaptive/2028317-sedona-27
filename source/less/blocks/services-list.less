@@ -47,4 +47,42 @@
   .services-list__description {
     text-align: center;
   }
+
+  .services-list__description-title {
+    font-size: @defaultTitleFontSize;
+  }
+
+  .services-list__description-caption {
+    margin-top: 22px;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  .services-list:not(:first-of-type) {
+    margin-top: 0;
+  }
+
+  .services-list__image {
+    &--house {
+      width: 80px;
+      height: 72px;
+      margin-bottom: 7px;
+    }
+
+    &--burger {
+      width: 80px;
+      height: 74px;
+    }
+
+    &--souvenir {
+      width: 67px;
+      height: 75px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .services-list__description-caption {
+    padding: 0 57px;
+  }
 }

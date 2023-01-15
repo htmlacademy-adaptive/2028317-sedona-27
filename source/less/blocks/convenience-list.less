@@ -13,3 +13,40 @@
 .convenience-list__caption {
   margin: 20px 0 0;
 }
+
+@media (min-width: 768px) {
+  .convenience-list {
+    padding: 41px 33px 52px;
+  }
+
+  .convenience-list__title {
+    font-size: @defaultTitleFontSize;
+    padding: 14px 16px 0;
+  }
+
+  .convenience-list__number {
+    margin: 11px 0 0;
+  }
+
+  .convenience-list__caption {
+    margin: 23px 0 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .convenience-list__title {
+    padding: 0 100px;
+  }
+
+  .convenience-list {
+    padding: 55px 33px 52px;
+  }
+
+  .convenience-list__caption {
+    padding: 0 20px;
+
+    &--padding {
+      padding: 0 29px;
+    }
+  }
+}

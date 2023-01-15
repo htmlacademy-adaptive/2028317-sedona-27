@@ -28,8 +28,30 @@ body {
   border-bottom: 1px solid @lineColor;
 }
 
+.vertical-line {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .line {
     display: none;
+  }
+
+  .vertical-line {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 338px;
+    background-color: #dbdbdb;
+  }
+}
+
+@media (min-width: 768px) {
+  .vertical-line {
+    left: 493px;
+    top: 24px;
   }
 }

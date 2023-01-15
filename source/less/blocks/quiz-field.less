@@ -22,3 +22,14 @@
 .quiz-field__input:checked ~ .radiomark::after {
   content: "";
 }
+
+@media (min-width: 1280px) {
+  .quiz-field {
+    padding-left: 66px;
+    margin: 0;
+  }
+
+  .quiz-field:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
