@@ -1,5 +1,32 @@
 .user-field {
+  position: relative;
   margin-top: 16px;
+
+  &::after {
+    content: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 58px;
+    width: 58px;
+    background-color: #e6e6e6;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--phone {
+    &::after {
+      content: "";
+      background-image: url("../img/icon-phone.svg");
+    }
+  }
+
+  &--email {
+    &::after {
+      content: "";
+      background-image: url("../img/icon-email.svg");
+    }
+  }
 }
 
 .user-field__label {
@@ -12,5 +39,22 @@
   width: 100%;
   min-height: 58px;
   padding-left: 16px;
+  box-sizing: border-box;
   .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px, "PT Sans");
+
+  &--icon {
+    width: 222px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .user-field {
+    margin-top: 17px;
+  }
+
+  .user-field__input {
+    &--icon {
+      width: 344px;
+    }
+  }
 }

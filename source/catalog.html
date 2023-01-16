@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фото и видео</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
-  <div class="container">
+  <div class="container container--catalog">
     <header class="main-header">
       <button class="main-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -14,10 +15,11 @@
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logotype-mobile.svg" alt="Седона">
       </a>
-      <!-- <nav class="main-header__nav"> -->
-        <!-- <div class="main-header__nav-wrapper"> -->
 
-          <!-- <ul class="main-header__nav-list site-list">
+      <nav class="main-header__nav">
+        <div class="main-header__nav-wrapper">
+
+          <ul class="main-header__nav-list site-list">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__item-link">
                 ГЛАВНАЯ
@@ -28,9 +30,9 @@
                 ФОТО И ВИДЕО
               </a>
             </li>
-          </ul> -->
+          </ul>
 
-          <!-- <ul class="main-header__nav-list site-list">
+          <ul class="main-header__nav-list site-list">
             <li class="site-list__item">
               <a class="site-list__item-link" href="form.html">
                 ФОРМА ОТЗЫВА
@@ -41,9 +43,10 @@
                 HTML ACADEMY
               </a>
             </li>
-          </ul> -->
-        <!-- </div> -->
-      <!-- </nav> -->
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
     <main class="main-container">
@@ -51,7 +54,7 @@
 
       <section class="main-container__subheader subheader">
         <div class="subheader__image">
-          <img src="./img/logo-caption.svg" alt="Седона" width="229" height="39">
+          <img class="subheader__image-caption" src="./img/logo-caption.svg" alt="Седона">
         </div>
         <h2 class="subheader__title">Фото и видео</h2>
         <p class="subheader__caption">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
@@ -61,49 +64,65 @@
 
       <section class="gallery">
         <div class="gallery__item-wrapper">
-          <div class="gallery__item">
-            <img src="img/photo-boris.jpg" alt="Просторы Седоны" width="280" height="280">
-            <h3 class="gallery__item-title">Неродные просторы</h3>
-            <cite class="gallery__item-author">Автор фото: Борис</cite>
-            <div class="gallery__item-like">
-              <div class="gallery__item-like-icon"></div>
-              <span class="gallery__item-like-number">1350</span>
+          <div class="gallery__item gallery__item--big">
+            <img src="img/photo-boris.jpg" alt="Просторы Седоны">
+            <div class="gallery__item-info">
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Неродные просторы</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Борис</cite>
+              </div>
+              <div class="gallery__item-info-like">
+                <div class="gallery__item-info-like-icon"></div>
+                <span class="gallery__item-info-like-number">1350</span>
+            </div>
             </div>
           </div>
 
           <div class="line"></div>
 
           <div class="gallery__item">
-            <img src="img/photo-sergey.jpg" alt="Местная растительность" width="280" height="280">
-            <h3 class="gallery__item-title">Местная растительность</h3>
-            <cite class="gallery__item-author">Автор фото: Сергей</cite>
-            <div class="gallery__item-like">
-              <div class="gallery__item-like-icon"></div>
-              <span class="gallery__item-like-number">143</span>
+            <img src="img/photo-sergey.jpg" alt="Местная растительность">
+            <div class="gallery__item-info">
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Местная растительность</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Сергей</cite>
+              </div>
+              <div class="gallery__item-info-like">
+                <div class="gallery__item-info-like-icon"></div>
+                <span class="gallery__item-info-like-number">143</span>
+              </div>
             </div>
           </div>
 
           <div class="line"></div>
 
           <div class="gallery__item">
-            <img src="img/photo-petr.jpg" alt="Дорога на север" width="280" height="280">
-            <h3 class="gallery__item-title">Дорога на север</h3>
-            <cite class="gallery__item-author">Автор фото: Петр</cite>
-            <div class="gallery__item-like">
-              <div class="gallery__item-like-icon"></div>
-              <span class="gallery__item-like-number">96</span>
+            <img src="img/photo-petr.jpg" alt="Дорога на север">
+            <div class="gallery__item-info">
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Дорога на север</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Петр</cite>
+              </div>
+              <div class="gallery__item-info-like">
+                <div class="gallery__item-info-like-icon"></div>
+                <span class="gallery__item-info-like-number">96</span>
+              </div>
             </div>
           </div>
 
           <div class="line"></div>
 
           <div class="gallery__item">
-            <img src="img/photo-anton.jpg" alt="Мост Дьявола" width="280" height="280">
-            <h3 class="gallery__item-title">Мост Дьявола</h3>
-            <cite class="gallery__item-author">Автор фото: Антон</cite>
-            <div class="gallery__item-like">
-              <div class="gallery__item-like-icon"></div>
-              <span class="gallery__item-like-number">254</span>
+            <img src="img/photo-anton.jpg" alt="Мост Дьявола">
+            <div class="gallery__item-info">
+              <div class="gallery__item-info-name">
+                <h3 class="gallery__item-info-name-title">Мост Дьявола</h3>
+                <cite class="gallery__item-info-name-author">Автор фото: Антон</cite>
+              </div>
+              <div class="gallery__item-info-like">
+                <div class="gallery__item-info-like-icon"></div>
+                <span class="gallery__item-info-like-number">254</span>
+              </div>
             </div>
           </div>
         </div>
@@ -115,9 +134,11 @@
         <div class="video-presentation__wrapper">
           <div class="video-presentation__caption">
             <b class="video-presentation__caption-title">Все еще сомневаетесь?</b>
-            <p class="video-presentation__caption-description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <p class="video-presentation__caption-description">Смотрите видеопрезентацию и скорее за билетами, пока они <br> не подорожали в очередной раз!</p>
           </div>
-          <video class="video-presentation__caption-video" src="https://www.youtube.com/watch?v=JzJA5xzN0QE" poster="img/video-fille.jpg"></video>
+          <div class="video-presentation__preview">
+            <img src="./img/icon-play.svg" alt="">
+          </div>
         </div>
       </section>
 

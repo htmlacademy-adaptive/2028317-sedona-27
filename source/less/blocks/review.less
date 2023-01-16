@@ -24,3 +24,56 @@
   border: 0 none;
   padding-bottom: 26px;
 }
+
+@media (min-width: 768px) {
+  .review {
+    padding: 0 60px;
+  }
+
+  .review__form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .review__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  .review__button {
+    margin: 0;
+    padding: 16px 72px;
+  }
+
+  .review__suffix {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .review {
+    padding: 0 120px;
+  }
+
+  .review__form-section {
+    margin-top: 69px;
+  }
+
+  .review__button-wrapper {
+    max-width: 768px;
+    margin: 14px auto 0 auto;
+  }
+
+  .review__button {
+    padding: 16px 101px;
+  }
+
+  .review__suffix {
+    margin-top: 10px;
+  }
+}

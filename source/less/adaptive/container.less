@@ -1,4 +1,21 @@
 .container {
+  position: relative;
   width: 320px;
   margin: 0 auto;
+  font-size: @defaultSubtitleFontSize;
+  text-transform: uppercase;
+  .font();
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 1200px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+  }
 }

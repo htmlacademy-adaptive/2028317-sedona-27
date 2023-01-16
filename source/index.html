@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -14,10 +15,11 @@
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logotype-mobile.svg" alt="Седона">
       </a>
-      <!-- <nav class="main-header__nav"> -->
-        <!-- <div class="main-header__nav-wrapper"> -->
 
-          <!-- <ul class="main-header__nav-list site-list">
+      <nav class="main-header__nav">
+        <div class="main-header__nav-wrapper">
+
+          <ul class="main-header__nav-list site-list">
             <li class="site-list__item site-list__item--active">
               <a class="site-list__item-link">
                 ГЛАВНАЯ
@@ -28,9 +30,9 @@
                 ФОТО И ВИДЕО
               </a>
             </li>
-          </ul> -->
+          </ul>
 
-          <!-- <ul class="main-header__nav-list site-list">
+          <ul class="main-header__nav-list site-list">
             <li class="site-list__item">
               <a class="site-list__item-link" href="form.html">
                 ФОРМА ОТЗЫВА
@@ -41,15 +43,17 @@
                 HTML ACADEMY
               </a>
             </li>
-          </ul> -->
-        <!-- </div> -->
-      <!-- </nav> -->
+          </ul>
+        </div>
+      </nav>
+
     </header>
 
     <main class="main-container">
       <h1 class="visually-hidden">Седона</h1>
       <div class="main-container__image">
-        <img src="./img/main-logo-caption.svg" alt="Седона" width="282" height="214">
+        <img class="main-container__image-caption" src="./img/main-logo-caption.svg" alt="Седона">
+        <img class="main-container__image-triangle" src="./img/icon-intro-triangle.svg" alt="">
       </div>
     <section class="main-container__advantage advantage">
       <div class="advantage__wrapper">
@@ -83,14 +87,14 @@
             </div>
           </div>
           <div class="advantage__item-description services-list">
-            <span class="services-list__image services-list__image--burger"></span>
+            <div class="services-list__image services-list__image--burger"></div>
             <div class="services-list__description">
               <h3 class="services-list__description-title">Еда</h3>
-              <p class="services-list__description-caption">Всегда заказывайте фирменный бургер,вы не разочаруетесь!</p>
+              <p class="services-list__description-caption">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>
           </div>
           <div class="advantage__item-description services-list">
-            <span class="services-list__image services-list__image--souvenir"></span>
+            <div class="services-list__image services-list__image--souvenir"></div>
             <div class="services-list__description">
               <h3 class="services-list__description-title">Сувениры</h3>
               <p class="services-list__description-caption">Не только китайского, но и местного производства!</p>
@@ -119,7 +123,7 @@
             <div class="advantage__item-description convenience-list">
               <h3 class="convenience-list__title page-title">Красивая дорога</h3>
               <p class="convenience-list__number">№4</p>
-              <p class="convenience-list__caption">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="convenience-list__caption convenience-list__caption--padding">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
           </div>
           <div class="line"></div>
@@ -138,17 +142,16 @@
     <section class="feedback">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p class="feedback__title">Заинтересовались?</p>
-        <p class="feedback__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+        <p class="feedback__description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
         <a class="feedback__button" href="#">Найти гостиницу</a>
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Карта местности</h2>
-      <img src="img/photo-map.jpg" alt="Карта местности">
     </section>
   </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--index">
       <div class="main-footer__wrapper">
         <div class="main-footer__hashtag">
           <b class="main-footer__hashtag-title">#VISITSEDONA</b>

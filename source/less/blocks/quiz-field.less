@@ -23,25 +23,13 @@
   content: "";
 }
 
-.radiomark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 46px;
-  width: 46px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background-color: #f2f2f2;
-}
+@media (min-width: 1280px) {
+  .quiz-field {
+    padding-left: 66px;
+    margin: 0;
+  }
 
-.radiomark::after {
-  content: none;
-  width: 16px;
-  height: 16px;
-  background-color: #333333;
-  border-radius: 50%;
-  top: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  .quiz-field:not(:last-of-type) {
+    margin-bottom: 0;
+  }
 }

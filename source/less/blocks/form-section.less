@@ -4,13 +4,14 @@
   padding: 0;
   margin: 26px 18px 0;
   padding-bottom: 34px;
+  flex: 1;
 
   &--impression {
     padding-bottom: 10px;
   }
 
   &--sights {
-    padding-bottom: 11px;
+    padding-bottom: 6px;
   }
 }
 
@@ -26,4 +27,139 @@
   padding: 18px;
   margin-top: 19px;
   min-height: 115px;
+}
+
+@media (min-width: 768px) {
+  .form-section {
+    margin: 26px 0 0;
+
+    &--introduce {
+      .user-field {
+        padding-right: 43px;
+      }
+    }
+
+    &--contacts {
+      .user-field {
+        padding-left: 44px;
+      }
+    }
+
+    &--impression {
+      margin-top: 29px;
+    }
+  }
+
+  .form-section__comment {
+    padding: 18px 18px 26px;
+  }
+
+  .form-section__wrapper {
+    display: grid;
+
+    &--quiz {
+      grid-template-columns: 295px 280px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    &--check {
+      grid-template-columns: 255px 224px;
+      padding-left: 84px;
+      padding-right: 84px;
+    }
+  }
+
+  .form-section__title {
+    position: relative;
+    font-size: 21px;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 123px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &--without-lines {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .form-section {
+    &--introduce {
+      .user-field {
+        padding-right: 50px;
+      }
+    }
+
+    &--contacts {
+      .user-field {
+        padding-left: 78px;
+      }
+    }
+
+    &--impression {
+      margin-top: 36px;
+    }
+
+    &--sights {
+      margin-top: 75px;
+    }
+  }
+
+  .form-section__wrapper {
+    &--quiz {
+      display: flex;
+      padding: 0 52px;
+      margin-top: 37px;
+      gap: 60px;
+    }
+
+    &--check {
+      display: flex;
+      padding: 0 44px;
+      margin-top: 33px;
+      gap: 63px;
+    }
+  }
+
+  .form-section__title {
+    &--without-lines {
+      padding-left: 6px;
+    }
+
+    &::before,
+    &::after {
+      width: 280px;
+    }
+  }
+
+  .form-section__comment {
+    max-width: 768px;
+    margin: 19px auto 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 19px 16px 38px;
+  }
 }
