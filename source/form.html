@@ -8,7 +8,7 @@
 </head>
 <body class="page__body">
   <div class="container">
-    <nav class="burger-menu burger-menu--opened">
+    <nav class="burger-menu burger-menu--closed burger-menu--nojs">
       <button class="burger-menu__toggle" type="button">
         <span class="visually-hidden">Управление меню</span>
       </button>
@@ -73,7 +73,7 @@
       <h1 class="visually-hidden">Седона</h1>
 
       <section class="main-container__subheader subheader form__subheader">
-        <div class="subheader__image">
+        <div class="main-container__image subheader__image">
           <img class="subheader__image-caption" src="./img/logo-caption.svg" alt="Седона">
         </div>
         <h2 class="subheader__title">Оставьте свой отзыв</h2>
@@ -239,6 +239,35 @@
         </div>
       </div>
     </footer>
+  </div>
+  <div class="error-modal error-modal--hidden">
+    <div class="error-modal__wrapper">
+      <div class="error-modal__title">
+        Что-то пошло не так!
+      </div>
+      <div class="error-modal__description">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </div>
+      <button class="error-modal__button">
+        Ок
+      </button>
+    </div>
+  </div>
+
+  <div class="success-modal success-modal--hidden">
+    <div class="success-modal__wrapper">
+      <div class="success-modal__title">
+        Ваш отзыв отправлен!
+      </div>
+      <div class="success-modal__description">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+      </div>
+      <div class="success-modal__button-wrapper">
+        <div class="success-modal__button">
+          Закрыть окно
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./js/script.js"></script>
 </body>

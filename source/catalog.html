@@ -8,7 +8,7 @@
 </head>
 <body class="page__body">
   <div class="container container--catalog">
-    <nav class="burger-menu burger-menu--opened">
+    <nav class="burger-menu burger-menu--closed burger-menu--nojs">
       <button class="burger-menu__toggle" type="button">
         <span class="visually-hidden">Управление меню</span>
       </button>
@@ -73,7 +73,7 @@
       <h1 class="visually-hidden">Седона</h1>
 
       <section class="main-container__subheader subheader">
-        <div class="subheader__image">
+        <div class="main-container__image subheader__image">
           <img class="subheader__image-caption" src="./img/logo-caption.svg" alt="Седона">
         </div>
         <h2 class="subheader__title">Фото и видео</h2>
@@ -92,7 +92,9 @@
                 <cite class="gallery__item-info-name-author">Автор фото: Борис</cite>
               </div>
               <div class="gallery__item-info-like">
-                <div class="gallery__item-info-like-icon"></div>
+                <button class="gallery__item-info-like-icon">
+                  <span class="visually-hidden">Лайк</span>
+                </button>
                 <span class="gallery__item-info-like-number">1350</span>
             </div>
             </div>
@@ -108,7 +110,9 @@
                 <cite class="gallery__item-info-name-author">Автор фото: Сергей</cite>
               </div>
               <div class="gallery__item-info-like">
-                <div class="gallery__item-info-like-icon"></div>
+                <button class="gallery__item-info-like-icon">
+                  <span class="visually-hidden">Лайк</span>
+                </button>
                 <span class="gallery__item-info-like-number">143</span>
               </div>
             </div>
@@ -124,7 +128,9 @@
                 <cite class="gallery__item-info-name-author">Автор фото: Петр</cite>
               </div>
               <div class="gallery__item-info-like">
-                <div class="gallery__item-info-like-icon"></div>
+                <button class="gallery__item-info-like-icon">
+                  <span class="visually-hidden">Лайк</span>
+                </button>
                 <span class="gallery__item-info-like-number">96</span>
               </div>
             </div>
@@ -140,7 +146,9 @@
                 <cite class="gallery__item-info-name-author">Автор фото: Антон</cite>
               </div>
               <div class="gallery__item-info-like">
-                <div class="gallery__item-info-like-icon"></div>
+                <button class="gallery__item-info-like-icon">
+                  <span class="visually-hidden">Лайк</span>
+                </button>
                 <span class="gallery__item-info-like-number">254</span>
               </div>
             </div>
@@ -157,7 +165,10 @@
             <p class="video-presentation__caption-description">Смотрите видеопрезентацию и скорее за билетами, пока они <br> не подорожали в очередной раз!</p>
           </div>
           <div class="video-presentation__preview">
-            <img src="./img/icon-play.svg" alt="">
+            <button class="video-presentation__preview-play">
+              <span class="visually-hidden">Запустить видео</span>
+            </button>
+            <!-- <img src="./img/icon-play.svg" alt=""> -->
           </div>
         </div>
       </section>
