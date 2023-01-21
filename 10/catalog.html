@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Фото и видео</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.webmanifest">
   <base href="https://htmlacademy-adaptive.github.io/2028317-sedona-27/10/">
 </head>
 <body class="page__body">
@@ -86,7 +88,11 @@
       <section class="gallery">
         <div class="gallery__item-wrapper">
           <div class="gallery__item gallery__item--big">
-            <img src="img/photo-boris.jpg" alt="Просторы Седоны">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-boris-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-boris-tablet.jpg">
+              <img src="img/photo-boris-phone.jpg" alt="Просторы Седоны">
+            </picture>
             <div class="gallery__item-info">
               <div class="gallery__item-info-name">
                 <h3 class="gallery__item-info-name-title">Неродные просторы</h3>
@@ -104,7 +110,11 @@
           <div class="line"></div>
 
           <div class="gallery__item">
-            <img src="img/photo-sergey.jpg" alt="Местная растительность">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-sergey-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-sergey-tablet.jpg">
+              <img src="img/photo-sergey-phone.jpg" alt="Местная растительность">
+            </picture>
             <div class="gallery__item-info">
               <div class="gallery__item-info-name">
                 <h3 class="gallery__item-info-name-title">Местная растительность</h3>
@@ -122,7 +132,11 @@
           <div class="line"></div>
 
           <div class="gallery__item">
-            <img src="img/photo-petr.jpg" alt="Дорога на север">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-petr-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-petr-tablet.jpg">
+              <img src="img/photo-petr-phone.jpg" alt="Дорога на север">
+            </picture>
             <div class="gallery__item-info">
               <div class="gallery__item-info-name">
                 <h3 class="gallery__item-info-name-title">Дорога на север</h3>
@@ -140,7 +154,11 @@
           <div class="line"></div>
 
           <div class="gallery__item">
-            <img src="img/photo-anton.jpg" alt="Мост Дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-anton-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/photo-anton-tablet.jpg">
+              <img src="img/photo-anton-phone.jpg" alt="Мост Дьявола">
+            </picture>
             <div class="gallery__item-info">
               <div class="gallery__item-info-name">
                 <h3 class="gallery__item-info-name-title">Мост Дьявола</h3>
@@ -169,7 +187,6 @@
             <button class="video-presentation__preview-play">
               <span class="visually-hidden">Запустить видео</span>
             </button>
-            <!-- <img src="./img/icon-play.svg" alt=""> -->
           </div>
         </div>
       </section>
