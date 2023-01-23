@@ -14,20 +14,20 @@
   height: 48px;
   background-color: @mainColor;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  &--vkontakte {
-    display: block;
-    background-image: url("../img/social-vk.svg");
-  }
+.social__list-item-link:hover {
+  background-color: #669ec0;
+}
 
-  &--youtube {
-    display: block;
-    background-image: url("../img/social-you-tube.svg");
-  }
+.social__list-item-link:active {
+  background-color: #5496bd;
 
-  &--telegram {
-    display: block;
-    background-image: url("../img/socia-telegram.svg");
+  path {
+    fill: rgba(255, 255, 255, 0.3);
   }
 }
 

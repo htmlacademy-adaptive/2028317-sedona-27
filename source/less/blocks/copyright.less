@@ -5,9 +5,27 @@
   align-items: center;
 }
 
-.copyright__link {
-  display: block;
-  background-image: url("../img/autograph.svg");
-  width: 27px;
-  height: 34px;
+// .copyright__link {
+//   // display: block;
+//   // background-image: url("../img/autograph.svg");
+//   // width: 27px;
+//   // height: 34px;
+//   // color: #000000;
+// }
+
+.copyright:hover {
+  color: @mainColor;
+
+  path {
+    fill: @mainColor;
+  }
+}
+
+
+.copyright:active {
+  color: #b3b3b3;
+
+  path {
+    fill: #b3b3b3;
+  }
 }
