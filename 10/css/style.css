@@ -33,7 +33,9 @@ body {
   font-family: "PT Sans";
 }
 .line {
-  border-bottom: 1px solid #D6D6D6;
+  box-sizing: border-box;
+  border-color: #e5e5e5;
+  width: 100%;
 }
 .vertical-line {
   display: none;
@@ -120,7 +122,7 @@ body {
 }
 .advantage__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 .advantage__item--background {
   background-color: #EEEEEE;
@@ -130,7 +132,6 @@ body {
 }
 .advantage__item--top .advantage__item-image {
   order: 2;
-  background-image: url("../img/photo-city.jpg");
 }
 .advantage__item--top .advantage__item-description {
   order: 1;
@@ -290,6 +291,16 @@ body {
   padding: 16px 24px;
   margin: 32px 0 49px;
 }
+.feedback__button:hover {
+  background: #669ec0;
+}
+.feedback__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+.feedback__button:disabled {
+  background: #e5e5e5;
+}
 @media (min-width: 768px) {
   .feedback {
     padding: 63px 0 0;
@@ -373,14 +384,13 @@ body {
   z-index: 1;
   overflow: hidden;
   height: 389px;
-  background-image: url("../img/photo-main-sedona.jpg");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 90px;
   background-size: cover;
+  background-color: #000000;
 }
 .main-container__image::before {
   content: "";
@@ -392,6 +402,16 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+.main-container__image::after {
+  content: "";
+  position: absolute;
+  top: 90px;
+  background-image: url("../img/main-logo-caption.svg");
+  width: 282px;
+  height: 214px;
+  background-size: cover;
+  z-index: 2;
+}
 .main-container__image-caption {
   width: 100%;
   height: 214px;
@@ -401,10 +421,10 @@ body {
   width: 1200px;
   height: 57px;
   bottom: 0;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   .main-container__image {
-    padding-top: 76px;
     height: 518px;
   }
   .main-container__image-caption {
@@ -732,18 +752,18 @@ body {
   height: 48px;
   background-color: #81B3D2;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.social__list-item-link--vkontakte {
-  display: block;
-  background-image: url("../img/social-vk.svg");
+.social__list-item-link:hover {
+  background-color: #669ec0;
 }
-.social__list-item-link--youtube {
-  display: block;
-  background-image: url("../img/social-you-tube.svg");
+.social__list-item-link:active {
+  background-color: #5496bd;
 }
-.social__list-item-link--telegram {
-  display: block;
-  background-image: url("../img/socia-telegram.svg");
+.social__list-item-link:active path {
+  fill: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 1280px) {
   .container--catalog .social__list {
@@ -759,11 +779,17 @@ body {
   justify-content: center;
   align-items: center;
 }
-.copyright__link {
-  display: block;
-  background-image: url("../img/autograph.svg");
-  width: 27px;
-  height: 34px;
+.copyright:hover {
+  color: #81B3D2;
+}
+.copyright:hover path {
+  fill: #81B3D2;
+}
+.copyright:active {
+  color: #b3b3b3;
+}
+.copyright:active path {
+  fill: #b3b3b3;
 }
 .site-list__item {
   margin: 0;
@@ -793,6 +819,12 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .site-list__item:hover {
+    color: #81b3d2;
+  }
+  .site-list__item:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 @media (min-width: 1280px) {
   .site-list {
@@ -806,15 +838,13 @@ body {
 .subheader {
   text-align: center;
 }
-.subheader__image {
+.subheader .main-container__image {
   height: 158px;
-  background-image: url("../img/photo-catalog.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 52px;
-  box-sizing: border-box;
 }
-.subheader__image-caption {
+.subheader .main-container__image::after {
+  background-image: url("../img/logo-caption.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 229px;
   height: 39px;
 }
@@ -832,13 +862,12 @@ body {
   padding: 0 18px;
 }
 @media (min-width: 768px) {
-  .subheader__image {
+  .subheader .main-container__image {
     height: 290px;
   }
-  .subheader__image-caption {
+  .subheader .main-container__image::after {
     width: 457px;
     height: 78px;
-    margin-top: 43px;
   }
   .subheader__title {
     font-size: 30px;
@@ -855,11 +884,8 @@ body {
   }
 }
 @media (min-width: 1280px) {
-  .subheader__image {
+  .subheader .main-container__image {
     height: 301px;
-  }
-  .subheader__image-caption {
-    margin-top: 49px;
   }
   .subheader__title {
     margin-top: 99px;
@@ -889,6 +915,13 @@ body {
   text-decoration: none;
   padding: 16px 49px;
   margin: 20px 18px 5px;
+}
+.review__button:hover {
+  background: #669ec0;
+}
+.review__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
 }
 .review__suffix {
   padding: 0 18px;
@@ -1118,8 +1151,21 @@ body {
   color: #000000;
   font-family: "PT Sans";
 }
+.user-field__input::placeholder {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
 .user-field__input--icon {
   width: 222px;
+}
+.user-field__input:hover {
+  background-color: #e5e5e5;
+}
+.user-field__input:active {
+  background: #ffffff;
+  border: 4px solid #e5e5e5;
 }
 @media (min-width: 1280px) {
   .user-field {
@@ -1137,7 +1183,7 @@ body {
   text-transform: none;
   position: relative;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 21px;
   color: #333333;
   font-family: "PT Sans";
@@ -1153,6 +1199,9 @@ body {
 }
 .quiz-field__input:checked ~ .radiomark::after {
   content: "";
+}
+.quiz-field__input:focus ~ .radiomark {
+  outline: 1px solid #0052d4;
 }
 @media (min-width: 1280px) {
   .quiz-field {
@@ -1177,15 +1226,6 @@ body {
   color: #333333;
   font-family: "PT Sans";
 }
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 46px;
-  width: 46px;
-  background-color: #f2f2f2;
-  border-radius: 4px;
-}
 .check-field__input {
   position: absolute;
   opacity: 0;
@@ -1196,16 +1236,8 @@ body {
 .check-field__input:checked ~ .checkmark::after {
   content: "";
 }
-.check-field .checkmark::after {
-  content: none;
-  position: absolute;
-  left: 17px;
-  top: 8px;
-  width: 11px;
-  height: 16px;
-  border: solid #333333;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+.check-field__input:focus ~ .checkmark {
+  outline: 1px solid #0052d4;
 }
 .radiomark {
   position: absolute;
@@ -1228,8 +1260,39 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.radiomark:hover {
+  background-color: #e5e5e5;
+}
+.radiomark:active {
+  background-color: #d5d5d5;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  width: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+.checkmark::after {
+  content: none;
+  position: absolute;
+  left: 17px;
+  top: 8px;
+  width: 11px;
+  height: 16px;
+  border: solid #333333;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.checkmark:hover {
+  background-color: #e5e5e5;
+}
+.checkmark:active {
+  background-color: #d5d5d5;
+}
 .map {
-  background-image: url("../img/photo-map.jpg");
   width: 100%;
   height: 350px;
   background-repeat: no-repeat;
@@ -1257,11 +1320,14 @@ body {
 .burger-menu--nojs .burger-menu__toggle {
   display: none;
 }
-.burger-menu--nojs .burger-menu {
+.burger-menu--nojs.burger-menu {
   position: static;
 }
 .burger-menu--nojs .burger-menu__list {
   display: block;
+}
+.burger-menu--nojs ~ .main-header {
+  display: none;
 }
 .burger-menu__list {
   background-color: #81B3D2;
@@ -1281,6 +1347,12 @@ body {
   width: 22px;
   height: 22px;
 }
+.burger-menu__toggle:hover {
+  opacity: 0.6;
+}
+.burger-menu__toggle:active {
+  opacity: 0.3;
+}
 .burger-menu__list-item {
   display: flex;
   justify-content: center;
@@ -1289,6 +1361,11 @@ body {
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
   padding: 21px 77px 13px 77px;
   font-size: 18px;
+  cursor: pointer;
+}
+.burger-menu__list-item-link {
+  text-decoration: none;
+  color: #ffffff;
 }
 .burger-menu__background {
   width: 100%;
@@ -1360,6 +1437,13 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+}
+.error-modal__button:hover {
+  background: #669ec0;
+}
+.error-modal__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 768px) {
   .error-modal__wrapper {
@@ -1448,6 +1532,13 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
+}
+.success-modal__button:hover {
+  background: #669ec0;
+}
+.success-modal__button:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
 }
 @media (min-width: 768px) {
   .success-modal__wrapper {
