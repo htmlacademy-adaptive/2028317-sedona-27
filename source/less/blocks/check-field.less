@@ -1,13 +1,13 @@
-.check-field:not(:last-of-type) {
-  margin-bottom: 9px;
-}
-
 .check-field {
   margin: 20px 0 24px;
   text-transform: none;
   position: relative;
   padding: 12px 0 0 64px;
   .font(@defaultMobileTitleFontSize, bold);
+
+  &:last-of-type {
+    margin-bottom: 22px;
+  }
 }
 
 .check-field__input {
@@ -23,5 +23,11 @@
 }
 
 .check-field__input:focus ~ .checkmark {
-  outline: 1px solid #0052d4;
+  outline: 2px solid @mainColor;
+}
+
+@media (min-width: 768px) {
+  .check-field {
+    margin: 20px 0 8px;
+  }
 }

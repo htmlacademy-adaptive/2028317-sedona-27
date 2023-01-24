@@ -2,16 +2,20 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 26px 18px 0;
+  margin: 26px 20px 0;
   padding-bottom: 34px;
   flex: 1;
 
   &--impression {
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   &--sights {
     padding-bottom: 6px;
+  }
+
+  &--contacts {
+    padding-bottom: 25px;
   }
 }
 
@@ -27,16 +31,25 @@
   padding: 18px;
   margin-top: 19px;
   min-height: 115px;
+  .focus();
 }
 
 @media (min-width: 768px) {
   .form-section {
-    margin: 26px 0 0;
+    margin: 81px 0 0;
 
     &--introduce {
       .user-field {
         padding-right: 43px;
       }
+    }
+
+    &--sights {
+      margin-top: 51px;
+    }
+
+    &--emotions {
+      margin-top: 28px;
     }
 
     &--contacts {
@@ -108,12 +121,16 @@
 @media (min-width: 1280px) {
   .form-section {
     &--introduce {
+      margin-top: 28px;
+
       .user-field {
         padding-right: 50px;
       }
     }
 
     &--contacts {
+      margin-top: 28px;
+
       .user-field {
         padding-left: 78px;
       }
@@ -124,7 +141,11 @@
     }
 
     &--sights {
-      margin-top: 75px;
+      margin-top: 85px;
+    }
+
+    &--emotions {
+      margin-top: 70px;
     }
   }
 

@@ -1,5 +1,9 @@
 .convenience-list {
-  padding: 24px 34px;
+  padding: 22px 34px 13px;
+
+  &:last-of-type {
+    padding-bottom: 22px;
+  }
 }
 
 .convenience-list__title {
@@ -16,7 +20,11 @@
 
 @media (min-width: 768px) {
   .convenience-list {
-    padding: 41px 33px 52px;
+    padding: 34px 33px 52px;
+
+    &:nth-of-type(2) {
+      padding-top: 24px;
+    }
   }
 
   .convenience-list__title {
@@ -39,7 +47,11 @@
   }
 
   .convenience-list {
-    padding: 55px 33px 52px;
+    padding: 67px 33px 40px;
+
+    &:nth-of-type(2) {
+      padding-top: 55px;
+    }
   }
 
   .convenience-list__caption {

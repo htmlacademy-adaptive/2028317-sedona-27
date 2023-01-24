@@ -34,12 +34,14 @@
 }
 
 .user-field__input {
+
   background-color: @mainFormColor;
-  border: none;
+  border: 4px solid @mainFormColor;
   width: 100%;
   min-height: 58px;
   padding-left: 16px;
   box-sizing: border-box;
+  .focus();
   .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px, "PT Sans");
 
   &::placeholder {
@@ -56,6 +58,7 @@
 
 .user-field__input:hover {
   background-color: #e5e5e5;
+  border-color: #e5e5e5;
 }
 
 .user-field__input:active {
