@@ -3,14 +3,37 @@
   z-index: 1;
   overflow: hidden;
   height: 389px;
-  background-image: url("../img/photo-main-sedona.jpg");
+  // background-image: url("../img/photo-main-sedona.jpg");
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 90px;
+  // padding-top: 90px;
   background-size: cover;
+  background-color: #000000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    bottom: 0;
+    background-image: url("../img/icon-intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    background-image: url("../img/main-logo-caption.svg");
+    width: 282px;
+    height: 214px;
+    background-size: cover;
+    z-index: 2;
+  }
 }
 
 .main-container__image-caption {
@@ -23,11 +46,12 @@
   width: 1200px;
   height: 57px;
   bottom: 0;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
   .main-container__image {
-    padding-top: 76px;
+    // padding-top: 76px;
     height: 518px;
   }
 

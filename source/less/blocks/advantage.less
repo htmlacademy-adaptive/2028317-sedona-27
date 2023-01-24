@@ -1,19 +1,18 @@
 .advantage__item {
   display: flex;
-  flex-direction: column;
-
-  &--textual {
-    padding: 20px 15px 32px 15px;
-  }
+  flex-direction: column-reverse;
 
   &--background {
     background-color: @additionalBackgroundColor;
   }
 
+  &--textual {
+    padding: 26px 20px 18px 19px;
+  }
+
   &--top {
     .advantage__item-image {
       order: 2;
-      background-image: url("../img/photo-city.jpg");
     }
 
     .advantage__item-description {
@@ -96,8 +95,8 @@
     flex-direction: row;
 
     &--textual {
-      padding: 20px 0 32px 0;
-      margin-top: 40px;
+      padding: 0;
+      margin-bottom: 64px;
     }
 
     &--bottom {
@@ -151,6 +150,10 @@
 
 @media (min-width: 1280px) {
   .advantage__item {
+    &--textual {
+      margin-bottom: 68px;
+    }
+
     &--top {
       .advantage__item-description-title {
         padding: 0 40px;
@@ -165,10 +168,6 @@
       .advantage__item-description-caption {
         padding: 10px 33px 0;
       }
-    }
-
-    &--textual {
-      padding: 33px 0 40px 0;
     }
   }
 

@@ -6,7 +6,7 @@
   margin: 18px 0 24px;
   text-transform: none;
   position: relative;
-  .font(@defaultMobileTitleFontSize, bold);
+  .font(@defaultMobileTitleFontSize, 700);
   padding-left: 65px;
   padding-top: 13px;
 }
@@ -21,6 +21,10 @@
 
 .quiz-field__input:checked ~ .radiomark::after {
   content: "";
+}
+
+.quiz-field__input:focus ~ .radiomark {
+  outline: 1px solid #0052d4;
 }
 
 @media (min-width: 1280px) {

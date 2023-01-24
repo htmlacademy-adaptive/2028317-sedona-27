@@ -7,28 +7,27 @@
 }
 
 .social__list-item-link {
+  background-position: center;
   color: inherit;
   text-decoration: none;
+  width: 48px;
+  height: 48px;
+  background-color: @mainColor;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  &--vkontakte {
-    display: block;
-    background-image: url("../img/social-vk.svg");
-    width: 48px;
-    height: 48px;
-  }
+.social__list-item-link:hover {
+  background-color: #669ec0;
+}
 
-  &--youtube {
-    display: block;
-    background-image: url("../img/social-you-tube.svg");
-    width: 48px;
-    height: 48px;
-  }
+.social__list-item-link:active {
+  background-color: #5496bd;
 
-  &--telegram {
-    display: block;
-    background-image: url("../img/socia-telegram.svg");
-    width: 48px;
-    height: 48px;
+  path {
+    fill: rgba(255, 255, 255, 0.3);
   }
 }
 
