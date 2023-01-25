@@ -1,13 +1,9 @@
-.quiz-field:not(:last-of-type) {
-  margin-bottom: 11px;
-}
-
 .quiz-field {
-  margin: 18px 0 24px;
+  margin: 20px 0 27px;
   text-transform: none;
   position: relative;
   .font(@defaultMobileTitleFontSize, 700);
-  padding-left: 65px;
+  padding-left: 61px;
   padding-top: 13px;
 }
 
@@ -24,7 +20,13 @@
 }
 
 .quiz-field__input:focus ~ .radiomark {
-  outline: 1px solid #0052d4;
+  outline: 2px solid @mainColor;
+}
+
+@media (min-width: 768px) {
+  .quiz-field {
+    margin: 20px 0 10px;
+  }
 }
 
 @media (min-width: 1280px) {

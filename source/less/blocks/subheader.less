@@ -1,17 +1,44 @@
 .subheader {
   text-align: center;
+
+  &--form {
+    .subheader__caption {
+      margin-bottom: 25px;
+    }
+  }
 }
 
-.subheader .main-container__image {
+.subheader__image {
+  overflow: hidden;
+  position: relative;
   height: 158px;
+  background-image: url("../img/photo-main-sedona.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 52px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 
-  &::after {
-    background-image: url("../img/logo-caption.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 229px;
-    height: 39px;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-main-sedona@2x.jpg");
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    bottom: 0;
+    background-image: url("../img/icon-intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.subheader__image-caption {
+  width: 229px;
+  height: 39px;
 }
 
 .subheader__title {
@@ -26,13 +53,19 @@
 }
 
 @media (min-width: 768px) {
-  .subheader .main-container__image {
+  .subheader__image {
     height: 290px;
+    background-image: url("../img/photo-main-sedona-tablet.jpg");
 
-    &::after {
-      width: 457px;
-      height: 78px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photo-main-sedona-tablet@2x.jpg");
     }
+  }
+
+  .subheader__image-caption {
+    width: 457px;
+    height: 78px;
+    margin-top: 43px;
   }
 
   .subheader__title {
@@ -44,20 +77,28 @@
     margin: 30px 148px 81px;
   }
 
-  .form__subheader .subheader__title {
+  .subheader--form .subheader__title {
     margin-bottom: 10px;
   }
 
-  .form__subheader .subheader__caption {
+  .subheader--form .subheader__caption {
     margin-top: 21px;
   }
 }
 
 @media (min-width: 1280px) {
-  .subheader .main-container__image {
+  .subheader__image {
     height: 301px;
+    background-image: url("../img/photo-main-sedona-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photo-main-sedona-desktop@2x.jpg");
+    }
   }
 
+  .subheader__image-caption {
+    margin-top: 49px;
+  }
 
   .subheader__title {
     margin-top: 99px;
@@ -67,7 +108,7 @@
     margin: 30px 365px 89px;
   }
 
-  .form__subheader {
+  .subheader--form {
     .subheader__title {
       margin-top: 114px;
     }

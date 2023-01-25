@@ -3,20 +3,35 @@
   flex-direction: column-reverse;
 
   &--background {
+    flex-direction: column;
     background-color: @additionalBackgroundColor;
   }
 
   &--textual {
-    padding: 26px 20px 18px 19px;
+    flex-direction: column;
+    padding: 18px 20px 18px 19px;
   }
 
   &--top {
+    position: relative;
+    overflow: hidden;
+
     .advantage__item-image {
       order: 2;
     }
 
     .advantage__item-description {
+      padding-top: 75px;
       order: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/advantage-triangle.svg");
+      top: 0;
+      width: 768px;
+      height: 37px;
     }
   }
 
@@ -38,7 +53,7 @@
 }
 
 .advantage__header {
-  padding: 35px 30px 24px;
+  padding: 35px 30px 0;
   text-align: center;
 }
 
@@ -94,13 +109,25 @@
   .advantage__item {
     flex-direction: row;
 
+    &--top {
+      flex-direction: row-reverse;
+
+      .advantage__item-description {
+        padding-top: 50px;
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+
     &--textual {
       padding: 0;
       margin-bottom: 64px;
     }
 
     &--bottom {
-      flex-direction: row-reverse;
+      flex-direction: row;
       margin-top: 14px;
 
       .advantage__item-description-title {
