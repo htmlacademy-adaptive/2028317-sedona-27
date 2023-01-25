@@ -116,7 +116,7 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(script)); 
+  gulp.watch('source/js/script.js', gulp.series(script));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
