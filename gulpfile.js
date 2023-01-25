@@ -122,19 +122,19 @@ const watcher = () => {
 
 // Build
 
-// export const build = gulp.series(
-//   clean,
-//   copy,
-//   optimizeImages,
-//   gulp.parallel(
-//       styles,
-//       html,
-//       script,
-//       svg,
-//       sprite,
-//       createWebP
-//     )
-//   )
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+      styles,
+      html,
+      script,
+      svg,
+      sprite,
+      createWebP
+    )
+  )
 
 // export default gulp.series(
 //   styles, server, watcher
