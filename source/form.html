@@ -55,8 +55,7 @@
                 Представьтесь:
               </legend>
 
-              <label for="user-name">Имя*:</label>
-              <input type="text" id="user-name" name="name" required>
+              <hr class="line" />
 
               <label for="user-surname">Фамилия*:</label>
               <input type="text" id="user-surname" name="surname" required>
@@ -82,8 +81,19 @@
                 Ваше общее впечатление:
               </legend>
 
-              <input type="radio" id="quiz-pos" checked>
-              <label for="quiz-pos">Скорее положительное</label>
+              <div class="form-section__wrapper form-section__wrapper--quiz">
+                <div class="form-section__quiz quiz-field">
+                  <label >
+                    <input
+                      type="radio"
+                      checked
+                      class="quiz-field__input"
+                      name="quiz-field"
+                    />
+                    <span class="radiomark"></span>
+                    <span>Скорее положительное</span>
+                  </label>
+                </div>
 
               <input type="radio" id="quiz-negative">
               <label for="quiz-negative">Скорее отрицательное</label>
@@ -111,46 +121,113 @@
               <label for="quiz-crag">Красные скалы</label>
             </fieldset>
 
-            <fieldset class="filter-form__section">
-              <legend class="filter-form__section-title">
-                Опишите свои эмоции:
-              </legend>
+            <hr class="line" />
 
-              <textarea name="comment" cols="30" rows="10">
-                Опишите подробно все свои восторги
-              </textarea>
+            <fieldset
+              class="review__form-section form-section form-section--emotions"
+            >
+              <legend class="form-section__title">Опишите свои эмоции:</legend>
+              <label>
+                <textarea class="form-section__comment" name="comment" rows="4">
+  Опишите подробно все свои восторги</textarea
+                >
+              </label>
             </fieldset>
-            <button type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-            <span>* — обязательные поля</span>
+            <div class="review__button-wrapper">
+              <button type="submit" class="review__button">
+                <span class="visually-hidden">Отправить</span>
+                ОТПРАВИТЬ ОТЗЫВ
+              </button>
+              <div class="review__suffix">* — обязательные поля</div>
+            </div>
           </form>
-
-      </div>
     </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="main-footer__wrapper">
-      <div class="main-footer__hashtag">
-        <b class="main-footer__hashtag-title">#VISITSEDONA</b>
-      </div>
-      <div class="main-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__item-link social__item-link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__item-link social__item-link--youtube" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
-          </li>
-          <li class="social__item">
-            <a class="social__item-link social__item-link--telegram" href="https://t.me/htmlacademy">Телеграмм</a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <footer class="main-footer main-footer--form">
+        <div class="main-footer__wrapper">
+          <div class="main-footer__hashtag">
+            <b class="main-footer__hashtag-title">#VISITSEDONA</b>
+          </div>
+          <div class="main-footer__social social">
+            <ul class="social__list">
+              <li class="social__list-item">
+                <a
+                  class="social__list-item-link social__list-item-link--vkontakte"
+                  href="https://vk.com/htmlacademy"
+                >
+                  <svg width="24" height="14">
+                    <use xlink:href="img/sprite.svg#social-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__list-item">
+                <a
+                  class="social__list-item-link social__list-item-link--telegram"
+                  href="https://t.me/htmlacademy"
+                >
+                <svg width="22" height="17">
+                  <use xlink:href="img/sprite.svg#socia-telegram"></use>
+                </svg>
+                </a>
+              </li>
+              <li class="social__list-item">
+                <a
+                  class="social__list-item-link social__list-item-link--youtube"
+                  href="https://www.youtube.com/user/htmlacademyru"
+                >
+                  <svg width="20" height="14">
+                    <use xlink:href="img/sprite.svg#social-you-tube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a
+            href="https://htmlacademy.ru/intensive/adaptive"
+            class="main-footer__copyright copyright"
+          >
+            <span class="visually-hidden">HTML Academy</span>
+            <div class="copyright__text">Разработано</div>
+            <div
+              class="copyright__link">
+              <svg width="27" height="35">
+                <use xlink:href="img/sprite.svg#autograph"></use>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <div class="error-modal error-modal--hidden">
+      <div class="error-modal__wrapper">
+        <div class="error-modal__title">Что-то пошло не так!</div>
+        <div class="error-modal__description">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить
+        </div>
+        <button class="error-modal__button">
+          <span class="visually-hidden">Принять</span>
+          Ок
+        </button>
       </div>
     </div>
-  </footer>
-</body>
+
+    <div class="success-modal success-modal--hidden">
+      <div class="success-modal__wrapper">
+        <div class="success-modal__title">Ваш отзыв отправлен!</div>
+        <div class="success-modal__description">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
+          время мы опубликуем его на сайте.
+        </div>
+        <div class="success-modal__button-wrapper">
+          <div class="success-modal__button">
+            <span class="visually-hidden">Закрыть</span>
+            Закрыть окно
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

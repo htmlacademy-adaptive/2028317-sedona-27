@@ -1,0 +1,122 @@
+.subheader {
+  text-align: center;
+
+  &--form {
+    .subheader__caption {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.subheader__image {
+  overflow: hidden;
+  position: relative;
+  height: 158px;
+  background-image: url("../img/photo-main-sedona.jpg");
+  background-color: #778591;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 52px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-main-sedona@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1200px;
+    height: 57px;
+    bottom: 0;
+    background-image: url("../img/icon-intro-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.subheader__image-caption {
+  width: 229px;
+  height: 39px;
+}
+
+.subheader__title {
+  .font(@defaultMobileTitleFontSize, bold, @textColorDark, 26px);
+  margin: 38px 0 25px;
+  padding: 0 18px;
+}
+
+.subheader__caption {
+  margin-bottom: 35px;
+  padding: 0 18px;
+}
+
+@media (min-width: 768px) {
+  .subheader__image {
+    height: 290px;
+    background-image: url("../img/photo-main-sedona-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photo-main-sedona-tablet@2x.jpg");
+    }
+  }
+
+  .subheader__image-caption {
+    width: 457px;
+    height: 78px;
+    margin-top: 43px;
+  }
+
+  .subheader__title {
+    font-size: 30px;
+    margin-top: 68px;
+  }
+
+  .subheader__caption {
+    margin: 30px 148px 81px;
+  }
+
+  .subheader--form .subheader__title {
+    margin-bottom: 10px;
+  }
+
+  .subheader--form .subheader__caption {
+    margin-top: 21px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .subheader__image {
+    height: 301px;
+    background-image: url("../img/photo-main-sedona-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photo-main-sedona-desktop@2x.jpg");
+    }
+  }
+
+  .subheader__image-caption {
+    margin-top: 49px;
+  }
+
+  .subheader__title {
+    margin-top: 99px;
+  }
+
+  .subheader__caption {
+    margin: 30px 365px 89px;
+  }
+
+  .subheader--form {
+    .subheader__title {
+      margin-top: 114px;
+    }
+
+    .subheader__caption {
+      margin-top: 31px;
+      margin-bottom: 44px;
+    }
+  }
+}

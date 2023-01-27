@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-display: swap;
+  src: local("PT Sans"),
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-display: swap;
+  src: local("PT Sans"),
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+@defaultSubtitleFontSize: 14px;
+@defaultTitleFontSize: 21px;
+
+@defaultMobileTitleFontSize: 18px;
+
+.font(@size: 14px, @weight: 400, @color: @captionTextColor, @lineHeight: 21px, @family: "PT Sans") {
+  font-size: @size;
+  font-weight: @weight;
+  line-height: @lineHeight;
+  color: @color;
+  font-family: @family, "Arial", sans-serif;
+}

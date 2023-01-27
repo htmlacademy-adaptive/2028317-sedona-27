@@ -1,0 +1,124 @@
+.service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 46px;
+  padding-top: 8px;
+  margin-bottom: 27px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--house {
+    &::before {
+      background-image: url("../img/icon-house.svg");
+      width: 39px;
+      height: 36px;
+    }
+  }
+
+  &--burger {
+    &::before {
+      background-image: url("../img/icon-burger.svg");
+      width: 40px;
+      height: 34px;
+    }
+  }
+
+  &--souvenir {
+    &::before {
+      background-image: url("../img/icon-souvenir.svg");
+      width: 36px;
+      height: 38px;
+    }
+  }
+}
+
+.service__title {
+  margin: 0;
+  .font(@defaultMobileTitleFontSize, 700, @textColorDark, 26px);
+}
+
+.service__caption {
+  margin-bottom: 0;
+  margin-top: 14px;
+}
+
+@media (min-width: 768px) {
+  .service {
+    flex: 1;
+    padding: 156px 40px 0;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+
+    &::before {
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--house {
+      &::before {
+        width: 77px;
+        height: 72px;
+      }
+    }
+
+    &--burger {
+      &::before {
+        width: 75px;
+        height: 70px;
+        background-size: cover;
+      }
+    }
+
+    &--souvenir {
+      &::before {
+        width: 69px;
+        height: 78px;
+        background-size: cover;
+        background-image: url("../img/icon-souvenir-tab.svg");
+      }
+    }
+  }
+
+  .service__title {
+    font-size: @defaultTitleFontSize;
+  }
+
+  .service__caption {
+    margin-top: 21px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .service {
+    padding: 169px 50px 0;
+
+    &::before {
+      top: 71px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--souvenir {
+      &::before {
+        background-image: url("../img/icon-souvenir.svg");
+        background-size: contain;
+        width: 80px;
+        height: 74px;
+      }
+
+      .service__caption {
+        padding: 3px 25px 0;
+      }
+    }
+  }
+}

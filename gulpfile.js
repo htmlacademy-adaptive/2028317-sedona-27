@@ -18,6 +18,80 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build'))
+}
+
+// Scripts
+
+const script = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
+}
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'))
+}
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
+  .pipe(gulp.dest('build/img'))
+}
+
+// WebP
+
+const createWebP = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh({ webp: {} }))
+  .pipe(gulp.dest('build/img'))
+}
+
+// Svg
+
+const svg = () => {
+  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/svg'))
+}
+
+// Sprite
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({ inlineSvg: true }))
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('build/img'))
+}
+
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest'
+  ], {
+    base: 'source'
+  }).pipe(gulp.dest('build'))
+  done();
+}
+
+// Clean
+
+const clean = () => {
+  return del('build')
+}
+
 // Server
 
 const server = (done) => {
