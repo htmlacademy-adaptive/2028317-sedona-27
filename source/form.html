@@ -65,9 +65,7 @@
 
             <ul class="main-header__nav-list site-list">
               <li class="site-list__item site-list__item--active">
-                <a class="site-list__item-link">
-                  ФОРМА ОТЗЫВА
-                </a>
+                <a class="site-list__item-link"> ФОРМА ОТЗЫВА </a>
               </li>
               <li class="site-list__item">
                 <a class="site-list__item-link" href="https://htmlacademy.ru">
@@ -78,10 +76,7 @@
           </div>
         </nav>
       </header>
-
-      <main class="main-container">
-        <h1 class="visually-hidden">Седона</h1>
-
+      <main>
         <section class="main-container__subheader subheader subheader--form">
           <div class="subheader__image">
             <img
@@ -318,13 +313,15 @@
               class="review__form-section form-section form-section--emotions"
             >
               <legend class="form-section__title">Опишите свои эмоции:</legend>
-
-              <textarea class="form-section__comment" name="comment" rows="4">
-Опишите подробно все свои восторги</textarea
-              >
+              <label>
+                <textarea class="form-section__comment" name="comment" rows="4">
+  Опишите подробно все свои восторги</textarea
+                >
+              </label>
             </fieldset>
             <div class="review__button-wrapper">
               <button type="submit" class="review__button">
+                <span class="visually-hidden">Отправить</span>
                 ОТПРАВИТЬ ОТЗЫВ
               </button>
               <div class="review__suffix">* — обязательные поля</div>
@@ -355,9 +352,9 @@
                   class="social__list-item-link social__list-item-link--telegram"
                   href="https://t.me/htmlacademy"
                 >
-                <svg width="22" height="17">
-                  <use xlink:href="img/sprite.svg#socia-telegram"></use>
-                </svg>
+                  <svg width="22" height="17">
+                    <use xlink:href="img/sprite.svg#socia-telegram"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__list-item">
@@ -378,8 +375,7 @@
           >
             <span class="visually-hidden">HTML Academy</span>
             <div class="copyright__text">Разработано</div>
-            <div
-              class="copyright__link">
+            <div class="copyright__link">
               <svg width="27" height="35">
                 <use xlink:href="img/sprite.svg#autograph"></use>
               </svg>
@@ -395,7 +391,10 @@
           Проверьте поля, выделенные красным, скорее всего вы забыли их
           заполнить
         </div>
-        <button class="error-modal__button">Ок</button>
+        <button class="error-modal__button">
+          <span class="visually-hidden">Принять</span>
+          Ок
+        </button>
       </div>
     </div>
 
@@ -407,7 +406,10 @@
           время мы опубликуем его на сайте.
         </div>
         <div class="success-modal__button-wrapper">
-          <div class="success-modal__button">Закрыть окно</div>
+          <div class="success-modal__button">
+            <span class="visually-hidden">Закрыть</span>
+            Закрыть окно
+          </div>
         </div>
       </div>
     </div>

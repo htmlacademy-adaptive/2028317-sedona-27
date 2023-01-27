@@ -14,7 +14,6 @@
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin />
   </head>
   <body class="page__body">
-
     <div class="container">
       <nav class="burger-menu burger-menu--closed burger-menu--nojs">
         <button class="burger-menu__toggle" type="button">
@@ -43,7 +42,7 @@
         <div class="burger-menu__background"></div>
       </nav>
       <header class="main-header">
-        <a class="main-header__logo" href="index.html">
+        <a class="main-header__logo">
           <img
             class="main-header__logo-image"
             src="img/logotype-mobile.svg"
@@ -117,6 +116,27 @@
 
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-city-desktop.webp    1x,
+                    img/photo-city-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-city-tablet.webp    1x,
+                    img/photo-city-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/photo-city.webp 1x, img/photo-city@2x.webp 2x"
+                />
+
+                <source
                   media="(min-width: 1200px)"
                   srcset="
                     img/photo-city-desktop.jpg    1x,
@@ -162,6 +182,27 @@
 
             <div class="advantage__item advantage__item--bottom">
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    img/photo-bridge-desktop.webp    1x,
+                    img/photo-bridge-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/photo-bridge-tablet.webp    1x,
+                    img/photo-bridge-tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/photo-bridge.webp 1x, img/photo-bridge@2x.webp 2x"
+                />
+
                 <source
                   media="(min-width: 1200px)"
                   srcset="
@@ -250,6 +291,27 @@
 
           <picture>
             <source
+              type="image/webp"
+              media="(min-width: 1200px)"
+              srcset="
+                img/photo-map-desktop.webp    1x,
+                img/photo-map-desktop@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                img/photo-map-tablet.webp    1x,
+                img/photo-map-tablet@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="img/photo-map.webp 1x, img/photo-map@2x.webp 2x"
+            />
+
+            <source
               media="(min-width: 1200px)"
               srcset="
                 img/photo-map-desktop.jpg    1x,
@@ -295,9 +357,9 @@
                   class="social__list-item-link social__list-item-link--telegram"
                   href="https://t.me/htmlacademy"
                 >
-                <svg width="22" height="17">
-                  <use xlink:href="img/sprite.svg#socia-telegram"></use>
-                </svg>
+                  <svg width="22" height="17">
+                    <use xlink:href="img/sprite.svg#socia-telegram"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__list-item">
@@ -318,8 +380,7 @@
           >
             <span class="visually-hidden">HTML Academy</span>
             <div class="copyright__text">Разработано</div>
-            <div
-              class="copyright__link">
+            <div class="copyright__link">
               <svg width="27" height="35">
                 <use xlink:href="img/sprite.svg#autograph"></use>
               </svg>
