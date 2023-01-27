@@ -1,0 +1,41 @@
+.quiz-field {
+  margin: 20px 0 27px;
+  text-transform: none;
+  position: relative;
+  .font(@defaultMobileTitleFontSize, 700);
+  padding-left: 61px;
+  padding-top: 13px;
+}
+
+.quiz-field__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.quiz-field__input:checked ~ .radiomark::after {
+  content: "";
+}
+
+.quiz-field__input:focus ~ .radiomark {
+  outline: 2px solid @mainColor;
+}
+
+@media (min-width: 768px) {
+  .quiz-field {
+    margin: 20px 0 10px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .quiz-field {
+    padding-left: 66px;
+    margin: 0;
+  }
+
+  .quiz-field:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}

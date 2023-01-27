@@ -1,0 +1,70 @@
+.video-presentation {
+  padding: 9px 18px 0;
+  margin-bottom: -10px;
+}
+
+.video-presentation__caption {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.video-presentation__caption-description {
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.video-presentation__caption-title {
+  .font(18px, bold);
+  text-align: center;
+}
+
+.video-presentation__preview {
+  background-image: url("../img/video-fille.jpg");
+  width: 100%;
+  height: 177px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-presentation__preview-play {
+  background-image: url("../img/icon-play.svg");
+  cursor: pointer;
+  outline: none;
+  width: 49px;
+  height: 54px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  background-repeat: no-repeat;
+  .focus();
+}
+
+@media (min-width: 768px) {
+  .video-presentation {
+    padding: 60px 60px 0;
+  }
+
+  .video-presentation__caption-title {
+    font-size: 30px;
+  }
+
+  .video-presentation__preview {
+    margin-top: 90px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .video-presentation {
+    padding-top: 65px;
+  }
+
+  .video-presentation__preview {
+    width: 800px;
+    margin: 86px auto 0 auto;
+  }
+}

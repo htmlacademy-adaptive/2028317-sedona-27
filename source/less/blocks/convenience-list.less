@@ -1,0 +1,64 @@
+.convenience-list {
+  padding: 25px 34px 13px;
+
+  &:last-of-type {
+    padding-bottom: 22px;
+  }
+}
+
+.convenience-list__title {
+  margin: 0;
+}
+
+.convenience-list__number {
+  margin: 9px 0 0;
+}
+
+.convenience-list__caption {
+  margin: 17px 0 0;
+}
+
+@media (min-width: 768px) {
+  .convenience-list {
+    padding: 34px 33px 52px;
+
+    &:nth-of-type(2) {
+      padding-top: 24px;
+    }
+  }
+
+  .convenience-list__title {
+    font-size: @defaultTitleFontSize;
+    padding: 20px 16px 0;
+  }
+
+  .convenience-list__number {
+    margin: 11px 0 0;
+  }
+
+  .convenience-list__caption {
+    margin: 23px 0 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .convenience-list__title {
+    padding: 0 100px;
+  }
+
+  .convenience-list {
+    padding: 67px 33px 40px;
+
+    &:nth-of-type(2) {
+      padding-top: 55px;
+    }
+  }
+
+  .convenience-list__caption {
+    padding: 0 20px;
+
+    &--padding {
+      padding: 0 29px;
+    }
+  }
+}

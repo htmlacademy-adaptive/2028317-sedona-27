@@ -4,6 +4,13 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import rename from 'gulp-rename';
+import squoosh from 'gulp-libsquoosh';
+import del from 'del';
 
 // Styles
 
@@ -14,7 +21,7 @@ export const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -97,7 +104,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -110,10 +117,52 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/script.js', gulp.series(script));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
+
+//Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+      styles,
+      html,
+      script,
+      svg,
+      sprite,
+      createWebP
+    )
+  )
+
+// export default gulp.series(
+//   styles, server, watcher
+// );
 
 
 export default gulp.series(
-  styles, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+      styles,
+      html,
+      script,
+      svg,
+      sprite,
+      createWebP
+    ),
+    gulp.series(
+        server,
+        watcher
+      )
+  )

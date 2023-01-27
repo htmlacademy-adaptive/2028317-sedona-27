@@ -1,0 +1,33 @@
+.check-field {
+  margin: 20px 0 29px;
+  text-transform: none;
+  position: relative;
+  padding: 12px 0 0 64px;
+  .font(@defaultMobileTitleFontSize, bold);
+
+  &:last-of-type {
+    margin-bottom: 22px;
+  }
+}
+
+.check-field__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.check-field__input:checked ~ .checkmark::after {
+  content: "";
+}
+
+.check-field__input:focus ~ .checkmark {
+  outline: 2px solid @mainColor;
+}
+
+@media (min-width: 768px) {
+  .check-field {
+    margin: 20px 0 8px;
+  }
+}
